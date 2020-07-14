@@ -1,0 +1,13 @@
+<!-- <p>city-details works!</p> -->
+<div *ngIf="city">
+    <div>
+        <label>Name: </label> {{city.name}}
+    </div>
+    <div>
+        <label>population: </label> {{city.population}}
+    </div>
+
+    <span class="button is-small btn-danger" (click)='deleteCity(city.id)'>Delete</span>
+
+    <hr/>
+</div>

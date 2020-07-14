@@ -1,0 +1,24 @@
+<!-- <p>city-list works!</p> -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1>Cities</h1>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Population</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let city of cities | async">
+                    <td>{{city.name}}</td>
+                    <td>{{city.population}}</td>
+                    <td><button (click)="deleteCity(city.id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
